@@ -37,7 +37,48 @@
 	  			<button type="button" class="btn btn-primary" onclick="updateVisualization()">Filter</button>
 			</form>	
 			<!-- Parent container for the visualization -->
+
+		<div class="row">	
+			<div class="col-md-7">
+			<br>
+			<p>Click the circles to see details about each World Cup.</p>
 			<div id="chart-area"></div>
+			</div>
+			<div class="col-md-5">
+				<!-- <hd2>FIFA</hd2>	 -->
+				<table class="table" id="tableEdition" style ="display: none;">
+					<br><br><br><br><br><br>
+					<tr>
+						<!-- <td>Edition: </td>  -->
+						<td><strong><div id="title"></div></strong></td>
+					</tr>
+					<tr>
+						<td><strong>Winner: </strong></td> 
+						<td><div id="winner"></div></td>
+					</tr>
+					<tr>
+						<td><strong>Goals: </strong></td> 
+						<td><div id="goals"></div></td>
+					</tr>
+					<tr>
+						<td><strong>Average Goals: </strong></td> 
+						<td><div id="average goals"></div></td>
+					</tr>	
+					<tr>
+						<td><strong>Matches: </strong></td> 
+						<td><div id="matches"></div></td>
+					</tr>	
+					<tr>
+						<td><strong>Teams: </strong></td> 
+						<td><div id="teams"></div></td>
+					</tr>	
+					<tr>
+						<td><strong>Average Attendance: </strong></td> 
+						<td><div id="average attendance"></div></td>
+					</tr>	
+				</table>
+			</div>
+		</div>
 
 	<!-- Load JS libraries: jQuery, bootstrap, D3, D3 tooltip -->
 	<script src="js/jquery.min.js"></script>

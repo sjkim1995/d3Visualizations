@@ -188,6 +188,7 @@ function updateVisualization() {
 	circles
 		.on('mouseover', tip.show)
   		.on('mouseout', tip.hide)
+  		.on('click', function(d) {showEdition(d)});
   	
   	// exit for circles
 	circles.exit().remove();
@@ -205,4 +206,16 @@ function updateVisualization() {
     	.call(yAxis);
 }
 
+// Show details for a specific FIFA World Cup
+function showEdition(d){
+	// updates the table with information
+	document.getElementById("title").innerHTML = d.EDITION; 
+	document.getElementById("winner").innerHTML = d.WINNER;
+	document.getElementById("goals").innerHTML = d.GOALS;
+	document.getElementById("average goals").innerHTML = d.AVERAGE_GOALS;
+	document.getElementById("matches").innerHTML = d.MATCHES;
+	document.getElementById("teams").innerHTML = d.TEAMS;
+	document.getElementById("average attendance").innerHTML = d.AVERAGE_ATTENDANCE
+	document.getElementById("tableEdition").display = "show";  
+};
 
