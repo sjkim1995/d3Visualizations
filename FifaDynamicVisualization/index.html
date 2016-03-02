@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CS171 - HW 5</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+	<div class="container">
+			<h1>FIFA World Cup<sup>TM</sup></h1>
+			<h3>All Time Statistics</h3>
+			<hr>
+
+			<form class="form-inline" onsubmit="updateVisualization()">
+				<div class="form-group">
+			    <label for="rankingType">Chart Data: </label>
+			    <select class="form-control" id="ranking-type" onchange="updateVisualization()">
+					  	<option value="GOALS" id= "Goals">Goals</option>
+					  	<option value="AVERAGE_GOALS" id= "Average Goals">Average Goals</option>
+					  	<option value="MATCHES" id= "Matches">Matches</option>
+						<option value="TEAMS" id= "Teams">Teams</option>
+						<option value="AVERAGE_ATTENDANCE" id= "Average Attendance">Average Attendance</option>
+				</select>
+				</div>
+				&nbsp;&nbsp;
+				<div class="form-group">
+					<label for="xMin">Time Period: </label>
+					<input type="number" class="form-control" id="xMin" value="1930" style="width: 90px">
+					<label for="xMax">-</label>
+					<input type="number" class="form-control" id="xMax" value="2014" style="width: 90px">
+				</div>
+	  			<button type="button" class="btn btn-primary" onclick="updateVisualization()">Filter</button>
+			</form>	
+			<!-- Parent container for the visualization -->
+			<div id="chart-area"></div>
+
+	<!-- Load JS libraries: jQuery, bootstrap, D3, D3 tooltip -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/d3.min.js"></script>
+	<script src="js/d3.tip.js"></script>
+
+	<!-- Your implementation -->
+	<script src="js/main.js"></script>
+</body>
+</html>
