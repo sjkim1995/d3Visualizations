@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Malaria Control and Prevention</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<div style="banner">
+		<img src="img/africanChildren.jpg" width="100%"/>
+		<h1><span>Malaria Control and Prevention</span></h1>
+	</div>
+
+	<div class="facts">
+	<h3>Key Facts About Malaria:</h3>
+		<div class="row">
+			<div class="col-md-3">
+				<hr>
+				<strong>RISK:</strong> 
+				<p>About 3.2 billion people – almost half of the world’s population – are at risk of malaria.</p>
+				<hr>			
+			</div>
+			<div class="col-md-3">
+				<hr>
+				<strong>CASES:</strong> 
+				<p>214 million malaria cases reported worldwide in 2015.</p>
+				<hr>
+			</div>	
+			<div class="col-md-3">
+				<hr>
+				<strong>INCIDENCE:</strong> 
+				<p>37% global decrease in malaria incidence between 2000 and 2015.</p>
+				<hr>
+			</div>	
+			<div class="col-md-3">
+				<hr>
+				<strong>MORTALITY:</strong> 
+				<p>60% decrease in global malaria mortality rates between 2000 and 2015.</p>
+				<hr>
+			</div>	
+		</div>
+	</div>
+	<!-- Row with choropleth and text -->
+	<div class="row">	
+	    <div id="left2" class="col-md-6">
+		    <label for="rankingType">Filter by: </label>
+		    	<select class= "form-control" id="combobox" onchange="loadData()" style="width: 140px;">
+				  	<option value="atRisk" id= "atRisk">At Risk</option>
+				  	<option value="atHighRisk" id= "atHighRisk">At High Risk</option>
+					<option value="UNpopulation" id= "UNpopulation">UN Population</option>	
+				</select>
+	    	<br>
+	    	<div id="chart-area"></div>
+	    	<i>Note: if a country is greyed out in the graph, no data was retrieved for the type of data selected.</i>
+		</div>	
+	    <div id= "right2" class="col-md-6">	
+			<div class = "paragraph">
+				<h3>What is Malaria?</h3>Malaria is caused by the Plasmodium parasite and is transmitted by female Anopheles mosquitoes which bite between dusk and dawn. People infected with malaria often experience fever, chills and flu-like illness at first. Left untreated, the disease can lead to severe complications and, in some cases, death.</p>
+				<hr>
+				<img src="img/malaria3.jpg" width= "480px" height= "360px"/>
+				<hr>
+				<h3>Which populations are most at risk?</h3>
+	    		<p>The choropleth map on the left displays the percentage of the populations at risk (and at high risk) of contracting malaria in each African country as well as the population of each country as surveyed by the United Nations.</p>
+			</div>
+		</div>
+	</div>
+	<hr>
+	<div class="row">
+		<div id="left4" class="col-md-6" style= "padding-left: 40px">
+			<img src="img/malaria-no-more.jpg"/>
+		</div>
+		<div id="right4" class="col-md-6">
+			<h3>Progress</h3>
+			<p><strong>Progress to elimination.</strong> An increasing number of countries are moving towards elimination of malaria. Whereas only 13 countries were estimated to have fewer than 1000 malaria cases in 2000, 33 countries are estimated to have achieved this milestone in 2015.</p>
+			<br>
+			<p><strong>Financing of malaria control programmes.</strong> Global financing for malaria control increased from an estimated US$ 960 million in 2005 to US$ 2.5 billion in 2014. </p>
+			<a href="https://secure.malarianomore.org/page/contribute/donate">Donate</a> to Malaria No More, a non-profit organization that works towards to eradication of the disease.
+			<br><br>
+			<p><strong>Moving Forward.</strong> To address remaining challenges in global malaria control and elimination, WHO has developed the Global Technical Strategy for Malaria 2016-2030. Adopted by the World Health Assembly in May 2015, the strategy provides a technical framework for all endemic countries as they work towards malaria control and elimination. This Global Technical Strategy sets ambitious but achievable goals for 2030, including: reducing malaria case incidence by at least 90%; reducing malaria mortality rates by at least 90%; eliminating malaria in at least 35 countries; preventing a resurgence of malaria in all countries that are malaria-free. To achieve these targets, annual funding for malaria will need to triple over the next 15-year period, from US$ 2.7 billion (current level of spending) to US$ 8.7 billion by 2030.</p>
+
+		</div>
+	</div>
+	<hr>
+	<!-- Row with paragraph and tree -->
+	<div id="left3" class="col-md-5" style= "padding-left: 40px">
+		<h3>How is Malaria transmitted?</h3>
+		<div class = "treePara">
+			<p>Malaria in humans is caused by five species of parasites belonging to the genus Plasmodium.
+			Four of these – P. falciparum, P. vivax, P. malariae and P. ovale – are human malaria species that are spread from one person to another via the bite of female mosquitoes of the genus Anopheles. There are about 400 different species of Anopheles mosquitoes, but only 30 of these are vectors of major importance. In recent years, human cases of malaria due to P. knowlesi have been recorded – this species causes malaria among monkeys in certain forested areas of South-East Asia. Current information suggests that P. knowlesi malaria is not spread from person to person, but rather occurs in people when an Anopheles mosquito infected by a monkey then bites and infects humans (zoonotic transmission). P. falciparum and P. vivax are the most prevalent, and P. falciparum is the most dangerous, with the highest rates of complications and mortality. This deadly form of malaria is a serious public health concern in most countries in sub-Saharan Africa.</p>
+		</div>
+	</div>
+	<div id="right3" class="col-md-7">
+		<br>
+		<h4> Tree Diagram of Malaria Species</h4>
+		<div id="chart-area2"></div>
+	</div>
+
+	<!-- Load JS libraries -->
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/queue.min.js"></script>
+	<script src="js/topojson.js"></script>
+	<script src="js/d3.min.js"></script>
+	<script src="js/d3.tip.js"></script>
+
+	<!-- Choropleth and second visualization -->
+	<script src="js/vis-choropleth.js"></script>
+	<script src="js/vis-second.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

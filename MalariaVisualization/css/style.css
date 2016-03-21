@@ -1,0 +1,94 @@
+/* 
+Seon Joong (SJ) Kim
+Computer Science 171 
+Harvard University
+*/
+
+body {
+	padding-left: 50px;
+	padding-right: 50px;
+}
+
+h1 {
+	position: absolute;
+	top: 150px;
+	padding-left: 50px;
+}
+
+h1 span {
+	color: white;
+	background: black;
+	padding: 5px;
+}
+
+.banner {
+	position: relative;
+	width: 100%;
+}
+
+h4 {
+	text-align: center;
+}
+
+.paragraph {
+	padding-left: 60px;
+	padding-right: 60px;
+}
+
+.treePara{
+	font-size: 14px;
+}
+
+.node circle {
+  r: 14px;
+  stroke: #6F4242;
+  stroke-width: 3.5px;
+  fill: #fff;
+}
+
+.node text { 
+	font: 12px Arial; 
+}
+
+.link {
+  stroke: #d3d3d3;
+  stroke-width: 3px;
+}
+
+/*********************/
+/*  TOOLTIP OVERLAY  */
+/*********************/
+
+.tooltip-title {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.d3-tip {
+  line-height: 1;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}

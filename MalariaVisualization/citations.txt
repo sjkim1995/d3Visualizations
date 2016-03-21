@@ -1,0 +1,33 @@
+Citations for Seon Joong (S.J.) Kim's 171 Midterm Project
+
+
+Text and Image Citations
+-Textual content for malaria texts and paragraphs taken from the provided file textual-content.pdf
+-Banner image taken from http://www.africanewlife.org/wp-content/uploads/2012/11/ANLM_Website_InteriorBanner-09.jpg 
+-All other images taken from the provided img folder
+-Design for organization of how to display key facts from http://www.who.int/malaria/en/
+-"Malaria No More" image (bottom of the page) taken from https://relevantdevelopment.files.wordpress.com/2015/01/malaria-no-more.jpg
+-This website was hyperlinked as a place to donate to the elimination of malaria: https://secure.malarianomore.org/page/contribute/donate
+
+Code Citations
+
+https://css-tricks.com/text-blocks-over-image/
+-consulted for the image banner with text over it
+-Lines 14-17 in index.html and lines 18-27 in style.css
+
+http://www.d3noob.org/2014/01/tree-diagrams-in-d3js_11.html
+-consulted for the tree diagram and used for reference to code along with
+-Lines 202-255 in main.js and lines 42-56 in style.css
+
+https://bl.ocks.org/mbostock/3306362 (Mike Bostock Documentation)
+-consulted for the implementation of the choropleth graph using the color threshold method
+-No specific lines (all over main.js), but referred to for how to structure the domain arrays, color range, and writing a function that would assign colors
+based on argument value.
+
+https://github.com/Caged/d3-tip
+-consulted for the use of the tooltip to display information about each country
+-Lines 119-128, 131, 197-198 in main.js
+
+Tooltip Styles in template from HW5
+-the provided lines of code from style.css in HW5 were used to style the tooltip
+-used in lines 58-94 in style.css
