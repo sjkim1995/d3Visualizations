@@ -128,7 +128,6 @@ function updateVisualization() {
 		return d.YEAR;
 	}));
 
-
 	// y domain
 	y.domain([0, d3.max(DATA, function(d) {
     	return d[selection];
